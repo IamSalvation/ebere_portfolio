@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebere John · Certified Virtual Assistant</title>
+    <meta name="description"
+        content="Certified Virtual Assistant &amp; Administrative Operations Specialist. Helping founders reclaim 10+ hours weekly through reliable operational systems." />
+
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:title" content="Ebere John · Certified Virtual Assistant" />
+    <meta property="og:description"
+        content="Certified Virtual Assistant &amp; Administrative Operations Specialist. Helping founders reclaim 10+ hours weekly through reliable operational systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iamsalvation.github.io/ebere_portfolio/" />
+    <meta property="og:image" content="https://iamsalvation.github.io/ebere_portfolio/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ebere John - Certified Virtual Assistant Portfolio" />
+    <meta property="og:site_name" content="Ebere John · Certified Virtual Assistant" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ebere John · Certified Virtual Assistant" />
+    <meta name="twitter:description"
+        content="Certified Virtual Assistant &amp; Administrative Operations Specialist. Helping founders reclaim 10+ hours weekly through reliable operational systems." />
+    <meta name="twitter:image" content="https://iamsalvation.github.io/ebere_portfolio/assets/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Ebere John - Certified Virtual Assistant Portfolio" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="./assets/ebere_hero.jpg" fetchpriority="high" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- =============================================
+  PROGRESS BAR
+  ============================================= -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- =============================================
+  NOISE TEXTURE OVERLAY
+  ============================================= -->
+    <div class="noise-overlay"></div>
+
+    <!-- =============================================
+  GLOW TRAIL
+  ============================================= -->
+    <div class="glow-trail" id="glowTrail"></div>
+
+    <!-- =============================================
+  CUSTOM CURSOR
+  ============================================= -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- =============================================
+  NAVIGATION
+  ============================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="logo">E<span>.</span></div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#worksamples">Work Samples</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#booking">Book</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =============================================
+  HERO - IMAGE ON RIGHT, CONTENT ON LEFT, OCTAGON FRAME
+  ============================================= -->
+    <section class="hero section-hidden" id="hero">
+        <div class="particles-container" id="particlesContainer"></div>
+
+        <div class="container hero-container">
+            <!-- Hero Content - LEFT SIDE -->
+            <div class="hero-content-left">
+                <div class="hero-badge">✦ Certified Virtual Assistant</div>
+                <h1 class="hero-title gradient-text">Helping You Stay <span>Organized &amp; Focused</span></h1>
+                <p class="hero-subtitle" id="typewriterText"></p>
+                <div class="hero-trust-badges">
+                    <span><i class="fas fa-check-circle"></i> Certified VA</span>
+                    <span><i class="fas fa-robot"></i> AI &amp; Automation</span>
+                    <span><i class="fas fa-envelope"></i> Inbox Zero Expert</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#booking" class="btn btn-primary btn-ripple">Work With Me</a>
+                    <a href="#services" class="btn btn-outline">View Services</a>
+                </div>
+            </div>
+
+            <!-- Hero Image - RIGHT SIDE with OCTAGON Frame -->
+            <div class="hero-image-right">
+                <div class="hero-image-frame-octagon tilt-card">
+                    <div class="hero-image-inner-octagon">
+                        <img src="./assets/ebere_hero.jpg" alt="Ebere John" fetchpriority="high" />
+                        <div class="hero-image-glow-octagon"></div>
+                    </div>
+                    <div class="hero-frame-accent-octagon"></div>
+                    <div class="hero-octagon-badge">✦ Certified Virtual Assistant</div>
+                    <div class="hero-octagon-corner hero-oc-tl"></div>
+                    <div class="hero-octagon-corner hero-oc-tr"></div>
+                    <div class="hero-octagon-corner hero-oc-bl"></div>
+                    <div class="hero-octagon-corner hero-oc-br"></div>
+                </div>
+                <!-- STATS BAR Below image -->
+                <div class="hero-stats-bar float-animation">
+                    <div class="stat-item">
+                        <strong class="counter" data-target="5">0</strong>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="500" data-suffix="+">0</strong>
+                        <span>Connections</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="10">0</strong>
+                        <span>Projects Delivered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  ABOUT - NO IMAGE, FULL TEXT
+  ============================================= -->
+    <section class="about section-hidden" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text-full">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Reliable. Organised. <span>Ready to Help.</span></h2>
+
+                    <p>I'm <strong>Ebere Esther John</strong>, a Certified Virtual Assistant with a passion for helping
+                        businesses run smoothly. With a strong background in administrative support and a sharp eye for
+                        detail, I bring structure to your day so nothing falls through the cracks.</p>
+
+                    <p>I communicate clearly, meet deadlines consistently, and adapt quickly to the needs of each client
+                        — whether you're a business owner, busy professional, or a growing team.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-inbox"></i>
+                            <div>
+                                <h4>Inbox Management</h4>
+                                <p>Reduced inbox clutter by 85% for clients — from 100+ emails daily to inbox zero</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Calendar &amp; Scheduling</h4>
+                                <p>Seamless appointment booking and conflict-free calendar coordination</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h4>AI &amp; Automation</h4>
+                                <p>Workflow automation using Zapier, ChatGPT, and Gemini to save 3+ hours weekly</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <div>
+                                <h4>Project Coordination</h4>
+                                <p>Track tasks and deadlines, send check-ins, keep stakeholders aligned</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="tagline">
+                        <span class="quote-mark">"</span>Behind every well-run business is an organized professional
+                        keeping everything moving.<span class="quote-mark">"</span>
+                        <span class="quote-author">— Ebere John</span>
+                    </p>
+
+                    <a href="#booking" class="btn btn-primary btn-ripple">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  SERVICES
+  ============================================= -->
+    <section class="services section-hidden" id="services">
+        <div class="container">
+            <span class="section-tag">What I Do</span>
+            <h2 class="section-title">Services <span>Offered</span></h2>
+            <p class="section-sub">Comprehensive administrative support for founders, entrepreneurs, and growing
+                businesses.</p>
+
+            <div class="services-scroll-wrapper">
+                <div class="services-scroll-track" id="servicesTrack">
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-inbox"></i></div>
+                        <h3>Inbox Management</h3>
+                        <p>Organised, prioritised email so you never miss an important message.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Calendar &amp; Scheduling</h3>
+                        <p>Seamless appointment booking and conflict-free calendar coordination.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Data Entry &amp; Reporting</h3>
+                        <p>Accurate data management and clean reports ready when you need them.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-file-word"></i></div>
+                        <h3>Document Preparation</h3>
+                        <p>Professional documents, presentations, and SOPs tailored to your brand.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Client Communication</h3>
+                        <p>Prompt, professional responses that represent your business with care.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>Project Coordination</h3>
+                        <p>Track tasks and deadlines, send check-ins, keep stakeholders aligned.</p>
+                    </div>
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-inbox"></i></div>
+                        <h3>Inbox Management</h3>
+                        <p>Organised, prioritised email so you never miss an important message.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Calendar &amp; Scheduling</h3>
+                        <p>Seamless appointment booking and conflict-free calendar coordination.</p>
+                    </div>
+                    <div class="service-card-horizontal glass-card card-glow shimmer">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Data Entry &amp; Reporting</h3>
+                        <p>Accurate data management and clean reports ready when you need them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  EXPERIENCE
+  ============================================= -->
+    <section class="experience section-hidden" id="experience">
+        <div class="container">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Career <span>Journey</span></h2>
+
+            <div class="experience-horizontal">
+                <div class="exp-card-horizontal glass-card card-glow shimmer">
+                    <div class="exp-number">01</div>
+                    <div class="exp-content-horizontal">
+                        <h3>Virtual Assistant</h3>
+                        <span class="exp-company-h">Bukkaway Limited, UK</span>
+                        <span class="exp-date-h">May 2026 – Present · 3 mos</span>
+                        <p>Supported daily operations for an international UK-based client, maintaining accurate order
+                            and inventory records with zero supervision.</p>
+                        <div class="exp-skills-h">
+                            <span>Virtual Assistance</span>
+                            <span>Inventory Management</span>
+                            <span>International Coordination</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card-horizontal glass-card card-glow shimmer">
+                    <div class="exp-number">02</div>
+                    <div class="exp-content-horizontal">
+                        <h3>Virtual Assistant (Admin &amp; Ops)</h3>
+                        <span class="exp-company-h">DainzBooks</span>
+                        <span class="exp-date-h">Feb 2026 – Present · 6 mos</span>
+                        <p>Providing ongoing virtual administrative support including workflow design, data management,
+                            and operational systems development.</p>
+                        <div class="exp-skills-h">
+                            <span>Google Workspace</span>
+                            <span>Zapier</span>
+                            <span>Project Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card-horizontal glass-card card-glow shimmer">
+                    <div class="exp-number">03</div>
+                    <div class="exp-content-horizontal">
+                        <h3>Virtual Assistant &amp; Ops Specialist</h3>
+                        <span class="exp-company-h">Self-Employed / Freelance</span>
+                        <span class="exp-date-h">Feb 2026 – Present · 6 mos</span>
+                        <p>Providing remote administrative support to founders, business owners, and professionals
+                            across multiple industries.</p>
+                        <div class="exp-skills-h">
+                            <span>Email Management</span>
+                            <span>Calendar Coordination</span>
+                            <span>Workflow Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card-horizontal glass-card card-glow shimmer">
+                    <div class="exp-number">04</div>
+                    <div class="exp-content-horizontal">
+                        <h3>Operations &amp; Guest Experience</h3>
+                        <span class="exp-company-h">The Food Factory GRA Enugu</span>
+                        <span class="exp-date-h">Nov 2021 – Mar 2025 · 3 yrs 5 mos</span>
+                        <p>7+ years delivering high-standard operational support in fast-paced hospitality environments.
+                        </p>
+                        <div class="exp-skills-h">
+                            <span>Operations Management</span>
+                            <span>Team Management</span>
+                            <span>Client Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  CERTIFICATIONS
+  ============================================= -->
+    <section class="certifications section-hidden" id="certifications">
+        <div class="container">
+            <span class="section-tag">Credentials</span>
+            <h2 class="section-title">Certifications &amp; <span>Achievements</span></h2>
+            <p class="section-sub">My skills are backed by recognised training and a commitment to continuous
+                professional development.</p>
+
+            <div class="cert-grid">
+                <div class="cert-card-new glass-card card-glow shimmer">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>Certified Virtual Assistant</h4>
+                    <p>TS ACADEMY</p>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card-new glass-card card-glow shimmer">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h4>Internship Certificate</h4>
+                    <p>Excelerate</p>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card-new glass-card card-glow shimmer">
+                    <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4>B.Sc. Tourism &amp; Travel Management</h4>
+                    <p>National Open University of Nigeria</p>
+                    <span class="cert-badge">In Progress</span>
+                </div>
+                <div class="cert-card-new glass-card card-glow shimmer">
+                    <div class="cert-icon"><i class="fas fa-hotel"></i></div>
+                    <h4>Hospitality Management</h4>
+                    <p>Lantana College of Hospitality</p>
+                    <span class="cert-badge">Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  WORK / CASE STUDIES
+  ============================================= -->
+    <section class="work section-hidden" id="work">
+        <div class="container">
+            <span class="section-tag">Case Studies</span>
+            <h2 class="section-title">Projects I've <span>Delivered</span></h2>
+            <p class="section-sub">Click any card to view the full case study.</p>
+
+            <div class="work-grid-new">
+                <div class="work-card-new glass-card card-glow shimmer" data-case="case1">
+                    <div class="work-icon-new"><i class="fas fa-inbox"></i></div>
+                    <h3>Inbox Management</h3>
+                    <p>Reduced 100+ emails to inbox zero</p>
+                    <span class="work-cta-new">View case →</span>
+                </div>
+                <div class="work-card-new glass-card card-glow shimmer" data-case="case2">
+                    <div class="work-icon-new"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Calendar Management</h3>
+                    <p>Seamless scheduling &amp; coordination</p>
+                    <span class="work-cta-new">View case →</span>
+                </div>
+                <div class="work-card-new glass-card card-glow shimmer" data-case="case3">
+                    <div class="work-icon-new"><i class="fas fa-users"></i></div>
+                    <h3>Client Onboarding</h3>
+                    <p>Structured onboarding system</p>
+                    <span class="work-cta-new">View case →</span>
+                </div>
+                <div class="work-card-new glass-card card-glow shimmer" data-case="case4">
+                    <div class="work-icon-new"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Project Management</h3>
+                    <p>Trello &amp; ClickUp coordination</p>
+                    <span class="work-cta-new">View case →</span>
+                </div>
+                <div class="work-card-new glass-card card-glow shimmer" data-case="case5">
+                    <div class="work-icon-new"><i class="fas fa-folder-open"></i></div>
+                    <h3>File Management</h3>
+                    <p>Google Drive organization</p>
+                    <span class="work-cta-new">View case →</span>
+                </div>
+                <div class="work-card-new glass-card card-glow shimmer" data-case="case6">
+                    <div class="work-icon-new"><i class="fas fa-file-excel"></i></div>
+                    <h3>Google Sheets</h3>
+                    <p>Data entry &amp; reporting systems</p>
+                    <span class="work-cta-new">View case →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  CASE STUDY MODAL
+  ============================================= -->
+    <div class="modal-overlay" id="caseModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content loaded via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+  WORK SAMPLES - WITH IMAGES (AUTO-MOVING CAROUSEL)
+  ============================================= -->
+    <section class="worksamples section-hidden" id="worksamples">
+        <div class="container">
+            <span class="section-tag">Work Samples</span>
+            <h2 class="section-title">Projects &amp; Systems <span>I've Built</span></h2>
+            <p class="section-sub">Projects and systems I've built for clients — auto-moving carousel.</p>
+
+            <div class="worksamples-carousel-wrapper">
+                <div class="worksamples-carousel-track" id="worksamplesTrack">
+                    <!-- Work Sample 1 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/trello_ebere.jpg" alt="Project Management — TM World Media" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Project Management</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Project Management</h4>
+                            <p>Set up a project management board to help TM World Media stay organized and consistent
+                                with tasks and deadlines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Work Sample 2 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/sheets_leads.jpg" alt="Client Support — BloomDesk Co." />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Client Support</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Client Support</h4>
+                            <p>A complete backend system that helps a busy consulting business stay organized, respond
+                                to clients professionally and track work weekly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Work Sample 3 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/inbox_mgt.jpg" alt="Inbox Management — DainzBooks" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Email Systems</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Inbox Management — DainzBooks</h4>
+                            <p>Set up folders and labels to categorize emails — urgent, follow-ups, newsletters —
+                                implementing filters to maintain daily inbox zero system.</p>
+                        </div>
+                    </div>
+
+                    <!-- Work Sample 4 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/calendar_mgt.jpg" alt="Calendar Management" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Calendar Systems</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Calendar Management — Self-Employed</h4>
+                            <p>Seamless appointment booking and conflict-free calendar coordination for founders and
+                                busy professionals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Work Sample 5 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/client_onboarding.jpeg"
+                                alt="Client Onboarding — Group 104 VA Solutions" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Onboarding Systems</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Client Onboarding — Group 104 VA Solutions</h4>
+                            <p>Drafted client onboarding email and task brief, created shared Google Drive folder for
+                                seamless client communication.</p>
+                        </div>
+                    </div>
+
+                    <!-- Work Sample 6 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/sheets_leads.jpg" alt="File Management" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">File Organization</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>File Management — Multiple Clients</h4>
+                            <p>Maintain tidy digital folders and improve how information is stored so clients can find
+                                what they need quickly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Work Sample 7 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/sheet_ledger.jpg" alt="Google Sheets — Data Reporting" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Data Systems</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Google Sheets — Data Reporting</h4>
+                            <p>Update spreadsheets, maintain accurate data records and create clean reports ready when
+                                clients need them.</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Card 1 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/ebere_tsa_certificate.jpg" alt="Certified Virtual Assistant" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">✦ Credential</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Certified Virtual Assistant — TS ACADEMY</h4>
+                            <p>Certified Virtual Assistant with training in administrative support, inbox management,
+                                calendar coordination, and client communication.</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Card 2 -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/ebere_excellerate_certificate.jpg" alt="Internship Certificate" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">✦ Credential</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Internship Certificate — Excelerate</h4>
+                            <p>Completed internship program with hands-on training in project coordination, team
+                                collaboration, and administrative operations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/Notion_tracker.jpg" alt="Project Management — TM World Media" />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Project Management</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Project Management</h4>
+                            <p>Set up a project management board to help TM World Media stay organized and consistent
+                                with tasks and deadlines.</p>
+                        </div>
+                    </div>
+                    <div class="worksample-card">
+                        <div class="worksample-image">
+                            <img src="./assets/sheets_leads.jpg" alt="Client Support — BloomDesk Co." />
+                            <div class="worksample-overlay">
+                                <span class="worksample-tag">Client Support</span>
+                            </div>
+                        </div>
+                        <div class="worksample-content">
+                            <h4>Client Support</h4>
+                            <p>A complete backend system that helps a busy consulting business stay organized, respond
+                                to clients professionally and track work weekly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  TOOLS
+  ============================================= -->
+    <section class="tools section-hidden" id="tools">
+        <div class="container">
+            <span class="section-tag">My Toolbox</span>
+            <h2 class="section-title">Tools I <span>Master</span></h2>
+            <div class="tools-marquee-wrapper">
+                <div class="tools-marquee-track" id="toolsTrack">
+                    <span class="tool-marquee-item"><i class="fas fa-google"></i> Google Workspace</span>
+                    <span class="tool-marquee-item"><i class="fas fa-brain"></i> Notion</span>
+                    <span class="tool-marquee-item"><i class="fab fa-trello"></i> Trello</span>
+                    <span class="tool-marquee-item"><i class="fas fa-bolt"></i> Zapier</span>
+                    <span class="tool-marquee-item"><i class="fas fa-tasks"></i> Asana</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> ChatGPT</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> Gemini</span>
+                    <span class="tool-marquee-item"><i class="fas fa-calendar-alt"></i> Calendly</span>
+                    <span class="tool-marquee-item"><i class="fab fa-microsoft"></i> Microsoft Office</span>
+                    <span class="tool-marquee-item"><i class="fas fa-video"></i> Zoom</span>
+                    <span class="tool-marquee-item"><i class="fas fa-slack"></i> Slack</span>
+                    <span class="tool-marquee-item"><i class="fab fa-canva"></i> Canva</span>
+                    <!-- Duplicate -->
+                    <span class="tool-marquee-item"><i class="fas fa-google"></i> Google Workspace</span>
+                    <span class="tool-marquee-item"><i class="fas fa-brain"></i> Notion</span>
+                    <span class="tool-marquee-item"><i class="fab fa-trello"></i> Trello</span>
+                    <span class="tool-marquee-item"><i class="fas fa-bolt"></i> Zapier</span>
+                    <span class="tool-marquee-item"><i class="fas fa-tasks"></i> Asana</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> ChatGPT</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> Gemini</span>
+                    <span class="tool-marquee-item"><i class="fas fa-calendar-alt"></i> Calendly</span>
+                    <span class="tool-marquee-item"><i class="fab fa-microsoft"></i> Microsoft Office</span>
+                    <span class="tool-marquee-item"><i class="fas fa-video"></i> Zoom</span>
+                    <span class="tool-marquee-item"><i class="fas fa-slack"></i> Slack</span>
+                    <span class="tool-marquee-item"><i class="fab fa-canva"></i> Canva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  TESTIMONIALS - AUTO-SLIDING CAROUSEL
+  ============================================= -->
+    <section class="testimonials section-hidden" id="testimonials">
+        <div class="container">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What Clients <span>Say</span></h2>
+
+            <div class="testimonial-carousel-wrapper">
+                <div class="testimonial-carousel-track" id="testimonialCarouselTrack">
+                    <div class="testimonial-card-new glass-card card-glow shimmer">
+                        <div class="t-quote-new">"</div>
+                        <p>Ebere transformed how I manage my week. My inbox is finally under control and I haven't
+                            missed a single meeting since we started working together.</p>
+                        <div class="t-author-new">
+                            <div class="t-avatar-new">D</div>
+                            <div>
+                                <div class="t-name-new">David N.</div>
+                                <div class="t-role-new">CEO, DainzBooks</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card-new glass-card card-glow shimmer">
+                        <div class="t-quote-new">"</div>
+                        <p>Incredibly reliable and detail-oriented. Ebere delivered exactly what I needed, clearly
+                            communicated, on time, every single time.</p>
+                        <div class="t-author-new">
+                            <div class="t-avatar-new">K</div>
+                            <div>
+                                <div class="t-name-new">Kate</div>
+                                <div class="t-role-new">Restaurant Owner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card-new glass-card card-glow shimmer">
+                        <div class="t-quote-new">"</div>
+                        <p>Ebere's support has been invaluable. She understands operations at a deep level and delivers
+                            consistently. Highly recommended!</p>
+                        <div class="t-author-new">
+                            <div class="t-avatar-new">M</div>
+                            <div>
+                                <div class="t-name-new">Michael T.</div>
+                                <div class="t-role-new">Operations Director</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card-new glass-card card-glow shimmer">
+                        <div class="t-quote-new">"</div>
+                        <p>Ebere created SOPs that made onboarding new team members 40% faster. She's incredibly
+                            organized and thorough.</p>
+                        <div class="t-author-new">
+                            <div class="t-avatar-new">A</div>
+                            <div>
+                                <div class="t-name-new">Andrew R.</div>
+                                <div class="t-role-new">COO</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card-new glass-card card-glow shimmer">
+                        <div class="t-quote-new">"</div>
+                        <p>Ebere's ClickUp system brought order to our project chaos. We're now 100% on-time with all
+                            deliverables.</p>
+                        <div class="t-author-new">
+                            <div class="t-avatar-new">D</div>
+                            <div>
+                                <div class="t-name-new">David N.</div>
+                                <div class="t-role-new">Project Lead</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="testimonial-card-new glass-card card-glow shimmer">
+                        <div class="t-quote-new">"</div>
+                        <p>Ebere transformed how I manage my week. My inbox is finally under control and I haven't
+                            missed a single meeting since we started working together.</p>
+                        <div class="t-author-new">
+                            <div class="t-avatar-new">D</div>
+                            <div>
+                                <div class="t-name-new">David N.</div>
+                                <div class="t-role-new">CEO, DainzBooks</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="testimonial-btn testimonial-prev" id="testimonialPrev"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-btn testimonial-next" id="testimonialNext"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  BOOKING
+  ============================================= -->
+    <section class="booking section-hidden" id="booking">
+        <div class="container">
+            <div class="booking-card-full glass-card card-glow">
+                <div class="booking-content-center">
+                    <span class="section-tag"
+                        style="color:var(--blonde); border-color:rgba(212,175,55,0.3);">Schedule</span>
+                    <h2 style="color:var(--white); font-size:2.4rem; margin-bottom:8px;">Ready to <span
+                            style="color:var(--blonde);">Reclaim Your Time?</span></h2>
+                    <p style="color:rgba(255,255,255,0.6); font-size:1.05rem; max-width:540px; margin:0 auto 20px;">
+                        Let's simplify your workflow together. Book a discovery call to discuss how I can support your
+                        business.</p>
+
+                    <div class="booking-buttons-row">
+                        <a href="https://calendar.app.google/etGCcH5uzzejKfAs8" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-gold btn-ripple">
+                            <i class="fas fa-calendar-plus"></i> Book Discovery Call
+                        </a>
+                        <a href="mailto:johnebereesther@gmail.com" class="btn btn-email btn-ripple">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                        <a href="https://wa.me/2348179479886" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-whatsapp btn-ripple">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="booking-contact-row">
+                        <span><i class="fas fa-envelope"></i> johnebereesther@gmail.com</span>
+                        <span><i class="fas fa-phone"></i> +234 8179 479 886</span>
+                        <a href="./assets/ebere_resume.pdf" download class="btn btn-outline-light btn-sm">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  CONTACT
+  ============================================= -->
+    <section class="contact section-hidden" id="contact">
+        <div class="container">
+            <div class="contact-full-width">
+                <div class="contact-header-center">
+                    <span class="section-tag">Connect</span>
+                    <h2 class="section-title">Let's <span>Work Together</span></h2>
+                    <p>Ready to reclaim your time and focus on what truly matters? I'd love to learn about your business
+                        and explore how I can support you.</p>
+                </div>
+
+                <div class="contact-social-row">
+                    <a href="https://www.linkedin.com/in/ebere-john-5422921b0" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mzmercyedie" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/j_eberechi" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/@eberechiediej3205" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@berryskitchen042" target="_blank" rel="noopener noreferrer"
+                        aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/2348179479886" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <div class="contact-form-center">
+                    <form id="contactForm" action="https://formspree.io/f/mqerzzoo" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your name" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email address" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell me about your business and how I can help..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit btn-ripple">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  FOOTER
+  ============================================= -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Ebere John · Certified Virtual Assistant</p>
+            <p class="footer-tagline">Helping You Stay Organized &amp; Focused</p>
+        </div>
+    </footer>
+
+    <!-- =============================================
+  BACK TO TOP
+  ============================================= -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
