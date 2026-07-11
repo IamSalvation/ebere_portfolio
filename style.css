@@ -1277,7 +1277,7 @@ h3,
 }
 
 /* =============================================
-   WORK SAMPLES - WITH IMAGES (AUTO-MOVING CAROUSEL)
+   WORK SAMPLES - WITH IMAGES (AUTO-MOVING CAROUSEL - FIXED)
    ============================================= */
 .worksamples {
     padding: 60px 0 70px;
@@ -1291,13 +1291,18 @@ h3,
 .worksamples-carousel-wrapper {
     overflow: hidden;
     padding: 12px 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .worksamples-carousel-track {
     display: flex;
     gap: 24px;
-    animation: workSamplesScroll 40s linear infinite;
     width: max-content;
+    animation: workSamplesScroll 40s linear infinite;
+    will-change: transform;
 }
 
 .worksamples-carousel-track:hover {
@@ -1377,7 +1382,6 @@ h3,
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
@@ -2103,6 +2107,11 @@ footer .footer-tagline {
         flex: 0 0 240px;
     }
 
+    .worksamples-carousel-track {
+        animation-duration: 30s;
+        gap: 16px;
+    }
+
     .worksample-card {
         flex: 0 0 260px;
     }
@@ -2229,6 +2238,11 @@ footer .footer-tagline {
 
     .service-card-horizontal {
         flex: 0 0 200px;
+    }
+
+    .worksamples-carousel-track {
+        animation-duration: 25s;
+        gap: 12px;
     }
 
     .worksample-card {
