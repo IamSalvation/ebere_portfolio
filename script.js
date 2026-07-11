@@ -38,7 +38,7 @@ if (navToggle && navLinks) {
 // SMOOTH SCROLL
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
+    link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
         if (targetId && targetId !== '#') {
             const target = document.querySelector(targetId);
@@ -190,7 +190,7 @@ document.querySelectorAll('.tilt-card').forEach(card => {
 // BUTTON RIPPLE EFFECT
 // ============================================
 document.querySelectorAll('.btn-ripple').forEach(btn => {
-    btn.addEventListener('click', function (e) {
+    btn.addEventListener('click', function(e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -355,7 +355,7 @@ const modalContent = document.getElementById('modalContent');
 const modalClose = document.getElementById('modalClose');
 
 document.querySelectorAll('.work-card-new').forEach(card => {
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function() {
         const caseKey = this.dataset.case;
         const study = caseStudies[caseKey];
         if (!study) return;
@@ -401,13 +401,13 @@ function closeModal() {
 
 modalClose.addEventListener('click', closeModal);
 
-modalOverlay.addEventListener('click', function (e) {
+modalOverlay.addEventListener('click', function(e) {
     if (e.target === this) {
         closeModal();
     }
 });
 
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeModal();
     }
@@ -528,11 +528,55 @@ updateTestimonialCarousel();
 startTestimonialAutoSlide();
 
 // ============================================
+// FIX: WORK SAMPLES CAROUSEL - RESET ON MOBILE
+// ============================================
+const workSamplesTrack = document.getElementById('worksamplesTrack');
+
+function resetWorkSamplesAnimation() {
+    if (workSamplesTrack) {
+        // Remove and re-add animation to force restart
+        workSamplesTrack.style.animation = 'none';
+        // Force reflow
+        void workSamplesTrack.offsetHeight;
+        workSamplesTrack.style.animation = 'workSamplesScroll 40s linear infinite';
+    }
+}
+
+// Reset animation on mobile orientation change
+window.addEventListener('orientationchange', function() {
+    setTimeout(resetWorkSamplesAnimation, 300);
+});
+
+// Reset animation on resize (for mobile devices)
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        if (window.innerWidth <= 768) {
+            resetWorkSamplesAnimation();
+        }
+    }, 500);
+});
+
+// Also reset when the section becomes visible
+const workSamplesSection = document.getElementById('worksamples');
+if (workSamplesSection) {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                setTimeout(resetWorkSamplesAnimation, 200);
+            }
+        });
+    }, { threshold: 0.1 });
+    observer.observe(workSamplesSection);
+}
+
+// ============================================
 // CONTACT FORM
 // ============================================
 const form = document.getElementById('contactForm');
 if (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', function(e) {
         const btn = this.querySelector('.btn-submit');
         const original = btn.innerHTML;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
